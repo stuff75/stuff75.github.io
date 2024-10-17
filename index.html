@@ -5,9 +5,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div>
-        <video src="https://direct.franceinfo.fr/live/franceinfo-midfi.mp3" controls="" width="640" height="360"></video>
-    </div>
+    <script>
+  // Create video element
+const video = document.createElement('video');
+
+// Set attributes for the video element
+video.setAttribute('src', 'https://direct.franceinfo.fr/live/franceinfo-midfi.mp3');
+video.setAttribute('controls', 'controls');
+video.setAttribute('autoplay', 'true');
+
+// Append the video element to the body
+document.body.appendChild(video);
+</script>
   
 </body>
 </html>
