@@ -6,6 +6,10 @@
 </head>
 <body>
     <script>
+        function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+         sleep(2000).then(() => {
   // Create video element
 const video = document.createElement('video');
 
@@ -16,6 +20,7 @@ video.setAttribute('autoplay', 'true');
 
 // Append the video element to the body
 document.body.appendChild(video);
+         });
 </script>
   
 </body>
