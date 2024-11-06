@@ -10,31 +10,36 @@
         function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-         if(true) sleep(2000).then(() => {
-             console.log("will create video");
-  // Create video element
-const video = document.createElement('video');
 
-// Set attributes for the video element
+function create_video(url){
+    if(true) sleep(2000).then(() => {
+        console.log("will create video");
+        // Create video element
+        const video = document.createElement('video');
 
-//video.setAttribute('crossorigin','anonymous');
-//video.setAttribute('src', 'https://direct.franceinfo.fr/live/franceinfo-midfi.mp3');
-//video.setAttribute('src', 'http://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4');
-//video.setAttribute('src', 'SampleVideo_360x240_20mb.mp4');
-           //  video.setAttribute('src', 'videoplayback1.mp4');
-                          video.setAttribute('src', 'audioplayback.m4a');
-//video.setAttribute('src', 'mixkit-classical-vibes-4-684.mp3');
-             //video.setAttribute('src', 'mixkit-classical-9-716.mp3');
-            // video.setAttribute('src', 'mixkit-training-53.mp3');
-             
-             
-             
+        // Set attributes for the video element
+
+        //video.setAttribute('crossorigin','anonymous');
+         video.setAttribute('src', url);
+       
 video.setAttribute('controls', 'controls');
 video.setAttribute('autoplay', 'true');
 
 // Append the video element to the body
 document.body.appendChild(video);
          });
+}
+create_video('https://direct.franceinfo.fr/live/franceinfo-midfi.mp3');
+create_video('http://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4');
+create_video('SampleVideo_360x240_20mb.mp4');
+           //  create_video('videoplayback1.mp4');
+                        // create_video('audioplayback.m4a');
+create_video('mixkit-classical-vibes-4-684.mp3');
+             create_video('mixkit-classical-9-716.mp3');
+            // video.setAttribute('src', 'mixkit-training-53.mp3');
+             
+             
+             
 </script>
   
 </body>
